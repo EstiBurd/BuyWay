@@ -216,7 +216,7 @@
 },
 {
 	"id": "4",
-	"name": "קרם לחות BB בתוספת גוון ללא שמן",
+	"name": "קרם לחות BB בתוספת גוון ללא שמן גוון 01",
 	"barCode": 123,
 	"catalogId": "101490607",
 	"barCodeType": "INTERNAL",
@@ -253,7 +253,7 @@
 },
 {
 	"id": "41",
-	"name": "קרם לחות BB בתוספת גוון ללא שמן",
+	"name": " קרם לחות BB בתוספת גוון ללא שמן גוון 02",
 	"barCode": 123,
 	"catalogId": "101490607",
 	"barCodeType": "INTERNAL",
@@ -370,8 +370,8 @@
 	"salesUnit": "UNIT",
 	"HasRelatedProducts": [],
 	"networkProduct": null,
-	"companyName": "Garnier",
-	"logo": "GarnierLogo.png",
+	"companyName": "Spring",
+	"logo": "springLogo.jpg",
 	"image": null,
 	"categories": [
 	"ctgy_QBocnE1PYk1nWBofPYk"
@@ -406,8 +406,8 @@
 	"salesUnit": "UNIT",
 	"HasRelatedProducts": [],
 	"networkProduct": null,
-	"companyName": "Garnier",
-	"logo": "GarnierLogo.png",
+	"companyName": "Dior",
+	"logo": "DiorLogo.jpg",
 	"image": null,
 	"categories": [
 	"ctgy_QBocnE1PYk1nWBofPYk"
@@ -441,8 +441,8 @@
 	"salesUnit": "UNIT",
 	"HasRelatedProducts": [],
 	"networkProduct": null,
-	"companyName": "Garnier",
-	"logo": "GarnierLogo.png",
+	"companyName": "Les Infinis",
+	"logo": "les infinis logo.png",
 	"image": null,
 	"categories": [
 	"ctgy_QBocnE1PYk1nWBofPYk"
@@ -476,8 +476,8 @@
 	"salesUnit": "UNIT",
 	"HasRelatedProducts": [],
 	"networkProduct": null,
-	"companyName": "Garnier",
-	"logo": "GarnierLogo.png",
+	"companyName": "Madawi",
+	"logo": "madawiLogo.jpg",
 	"image": null,
 	"categories": [
 	"ctgy_QBocnE1PYk1nWBofPYk"
@@ -510,7 +510,7 @@
 	"HasRelatedProducts": [],
 	"networkProduct": null,
 	"companyName": "L'OREAL",
-	"logo": "GarnierLogo.png",
+	"logo": "lorealLogo.png",
 	"image": null,
 	"categories": [
 	"ctgy_QBocnE1PYk1nWBofPYk"
@@ -531,7 +531,7 @@
 				"inStock": true
 },
 {
-	"id": "3256",
+	"id": "32506",
 	"name": "סרום לשיער עם חומצה היאלורונית ללחות מוגברת",
 	"barCode": 123,
 	"catalogId": "101490607",
@@ -544,7 +544,7 @@
 	"HasRelatedProducts": [],
 	"networkProduct": null,
 	"companyName": "L'OREAL",
-	"logo": "GarnierLogo.png",
+	"logo": "lorealLogo.png",
 	"image": null,
 	"categories": [
 	"ctgy_QBocnE1PYk1nWBofPYk"
@@ -577,8 +577,8 @@
 	"salesUnit": "UNIT",
 	"HasRelatedProducts": [],
 	"networkProduct": null,
-	"companyName": "L'OREAL",
-	"logo": "GarnierLogo.png",
+	"companyName": "Unilever",
+	"logo": "UnileverLogo.png",
 	"image": null,
 	"categories": [
 	"ctgy_QBocnE1PYk1nWBofPYk"
@@ -612,7 +612,7 @@
 	"HasRelatedProducts": [],
 	"networkProduct": null,
 	"companyName": "NUDESTIX",
-	"logo": "GarnierLogo.png",
+	"logo": "nudestixlogo.jpg",
 	"image": null,
 	"categories": [
 	"ctgy_QBocnE1PYk1nWBofPYk"
@@ -645,7 +645,7 @@
 	"HasRelatedProducts": [],
 	"networkProduct": null,
 	"companyName": "NUDESTIX",
-	"logo": "GarnierLogo.png",
+	"logo": "nudestixlogo.jpg",
 	"image": null,
 	"categories": [
 	"ctgy_QBocnE1PYk1nWBofPYk"
@@ -678,7 +678,7 @@
 	"HasRelatedProducts": [],
 	"networkProduct": null,
 	"companyName": "NUDESTIX",
-	"logo": "GarnierLogo.png",
+	"logo": "nudestixlogo.jpg",
 	"image": null,
 	"categories": [
 	"ctgy_QBocnE1PYk1nWBofPYk"
