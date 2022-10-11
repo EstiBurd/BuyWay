@@ -6,26 +6,15 @@ import { products } from '../Products';
 const HomePage = () => {
     const navigate = useNavigate();
     const navigateMe = () => {
-        navigate("/ProductLink");
+        navigate("ProductLink", { state: checked });
     }
     const [checked, setchecked] = useState([]);
-    // const [product,setproduct] = useState(shuffle(products))
-
     const [product, setproduct] = useState([]);
 
     function shuffle(arr) {
-        let currentIndex = arr.length, randomIndex;
-        while (currentIndex !== 0) {
-            randomIndex = Math.floor(Math.random() * currentIndex);
-            if (randomIndex !== currentIndex) {
-                currentIndex--;
-                [arr[currentIndex], arr[randomIndex]] = [
-                    arr[randomIndex], arr[currentIndex]];
-            }
-        }
-        setproduct(arr);
+        const shuffledArray = arr.sort((a, b) => 0.5 - Math.random());
+        setproduct(shuffledArray);
     }
-
     useEffect(() => {
         return () => {
             shuffle(products);
@@ -42,6 +31,8 @@ const HomePage = () => {
             updateList.splice(checked.indexOf(prodById), 1);
         }
         setchecked(updateList);
+        // return checked;
+
     }
 
 
@@ -50,7 +41,7 @@ const HomePage = () => {
         <div>{product.map((prod, key) => {
             return (<div className="card" data-album-card>
                 {/* {prod.basicDataItems} */}
-                <input type={'checkbox'} defaultChecked={false} onChange={handleCheck} id={prod.id} value={prod} key={key} />
+                <input type={'checkbox'} defaultChecked={false} onChange={handleCheck} key={key} id={prod.id} value={prod} />
                 <div className="image">
                     <img src={("../../Images/" + prod.advancedDataItems.images[0])} alt="img" />
                     <img src={("../../Images/" + prod.logo)} alt="img" />

@@ -1,15 +1,20 @@
 import './App.css';
 import HomePage from './components/HomePage';
 import {createBrowserRouter,RouterProvider,Route,createRoutesFromElements} from "react-router-dom";
+import ProductLink from './components/ProductLink';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<HomePage />} />
+    <>
+    <Route path="/" element={<HomePage />}/>
+    <Route path="ProductLink" element={<ProductLink />} />
+    </>
   )
 );
 function App(){
   return (
     <RouterProvider router={router}/>
+    
   )
 }
 export default App;
