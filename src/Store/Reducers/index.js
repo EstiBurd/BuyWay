@@ -1,0 +1,1 @@
+export{prodReducer}from './prod';

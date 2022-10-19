@@ -3,15 +3,41 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
+import thunk from 'redux-thunk';
+import {prodReducer} from './Store/Reducers/prod'
+// import {combineReducers, createStore} from 'redux'
 // import { BrowserRouter } from 'react-router-dom';
+import { products } from './Products';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// const reducer = (state = products, action) => {
+//   switch (action.type) {
+//     case "CHANGE":
+//       state={...state,products:action.payload.prod}
+//       break;
+  
+//     default:
+//       break;
+//   }
+//   return state;
+// }
+// const store = createStore(combineReducers({prod:prodReducer}),composeEnhancers)(applyMiddleware(thunk)));
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(combineReducers({ prod:prodReducer}), composeEnhancers
+    (applyMiddleware(thunk)));
+
+
 root.render(
-  // <BrowserRouter>
-  // <App/>
-  // </BrowserRouter>
+  // <Provider store={store}>
+  //   <App/>
+  // </Provider>
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 
