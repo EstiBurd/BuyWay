@@ -29,7 +29,7 @@
 	"mapLists": { },
 	"basicDataItems": {
 		"typeSceen" : "רגיל/מעורב",
-		"isKosher" : true,
+		"isKosher" : "כשר לפסח",
 		"notContain":"סיליקוניים, צבעים סינתטי",
 		"content":"100 מ\"ל"
 	},
@@ -65,7 +65,7 @@
 	"mapLists": { },
 	"basicDataItems": {
 		"typeSceen" : "יבש/רגיל",
-		"isKosher" : true,
+		"isKosher" : "כשר לפסח",
 		"content":"100מ\"ל"
 	},
 	"Stores": null,
@@ -100,7 +100,7 @@
 	"mapLists": { },
 	"basicDataItems": {
 		"typeSceen" : "עור רגיש,לכל סוגי העור",
-		"isKosher" : true,
+		"isKosher" : "כשר לפסח",
 		"contain":"תמיסת מיסלר",
 		"content":"400 מ\"ל"
 	},
@@ -136,7 +136,7 @@
 	"mapLists": { },
 	"basicDataItems": {
 		"typeSceen" : "לעור רגיש",
-		"isKosher" : true,
+		"isKosher" : "כשר לפסח",
 		"contain":"תמצית צמח וויטמין B5",
 		"notContain":"ללא אלכוהול",
 		"content":"200 מ\"ל"
@@ -173,7 +173,7 @@
 	"mapLists": { },
 	"basicDataItems": {
 		"typeSceen" : "עור רגיש,לכל סוגי העור",
-		"isKosher" : true,
+		"isKosher" : "כשר לפסח",
 		"contain":"תמיסת מיסלר",
 		"content":"700 מ\"ל"
 	},
@@ -208,7 +208,7 @@
 	},
 	"mapLists": { },
 	"basicDataItems": {
-		"isKosher" : true,
+		"isKosher" : "כשר לפסח",
 		"contain":"פחם, חומצה סליצילית",
 		"content":"50 מ\"ל"
 	},
@@ -243,7 +243,7 @@
 	},
 	"mapLists": { },
 	"basicDataItems": {
-		"isKosher" : true,
+		"isKosher" : "כשר לפסח",
 		"notContain":"ללא פרבנים",
 		"content":"50 מ\"ל",
 		"typeSceen":"לעור שומני/מעורב",
@@ -280,7 +280,7 @@
 	},
 	"mapLists": { },
 	"basicDataItems": {
-		"isKosher" : true,
+		"כשר לפסח" : true,
 		"notContain":"ללא שמן, ללא פרבנים",
 		"content":"50 מ\"ל",
 		"typeSceen":"לעור שומני/מעורב",

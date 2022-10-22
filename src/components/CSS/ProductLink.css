@@ -1,61 +1,59 @@
-body {
+.filed{
+    color: red;
+}
+/* .bodyDiv {
     width: 100%;
-}
-
-::-webkit-scrollbar {
-    width: 2px;
-}
-
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgb(106, 162, 152);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(106, 162, 152, 0.616);
-}
-
-/* .col-container {
-    overflow: auto;
-    display: table;
-    width: 100%; 
-    width: 110px;
-    height: 110px;
-}*/
-.container{
-    max-width: 1200px;
-margin: auto;
-background: rgb(112, 111, 111);
-overflow: auto;
-}
-
-.cards{
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 390px;
-    /* width: 100%;
-    height: 80%;
+    height: 150px;
+    background: url(../../../public/Images/3222830.jpg) no-repeat top center;
+  /* background-attachment:fixed;
+    background-position: center top;
+    background-repeat: no-repeat; */
+    
+  /* } */
+  .cardsArr {
+    width: 70%;
+    border: 2rem;
+    transition: 0.3s;
     cursor: pointer;
+    height: 250px;
+    /* width: 100px; */
+    /* height: 100%; */
     background: #fff;
-    box-shadow: 1px 1px 10px -8px #333;
-    padding: 10px;
-    justify-content: space-between;
-    display: flex; */
-    /* margin: 10px; */
-    /* border:solid rgb(0, 0, 0) 1px; */
-} 
-/* .cards img{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding: 20px;
+    display: inline-block;
+    margin: 40px;
+    /* border: solid rgb(0, 0, 0); */
+    padding-right:30px ;
+    border-radius: 5px;
+    
+  }
+  
+  /* .imageLogo {
     width: 100%;
-    height: auto;
-} */
-
-.scroll {
-    margin: auto;
-    width: 50%;
-}
+    height: 230px;
+  } */
+  
+  #logoArr {
+    width: auto;
+    height: 30px;
+  }
+  
+  .imageArr img {
+    object-fit: cover;
+    width: auto;
+    height: 90px;
+  }
+  
+  .prodNameArr {
+    direction: rtl;
+  }
+  
+  .captionArr {
+    margin-top: 10px;
+    text-align: right;
+    color: #888;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 20px;
+  }

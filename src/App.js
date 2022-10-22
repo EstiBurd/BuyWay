@@ -1,44 +1,116 @@
 import './App.css';
 import HomePage from './components/HomePage';
-import { createBrowserRouter, RouterProvider, Route, createRoutesFromElements } from "react-router-dom";
+import { BrowserRouter, RouterProvider, Route, Routes, createRoutesFromElements } from "react-router-dom";
 import ProductLink from './components/ProductLink';
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
 import EditProd from './components/EditProd';
-import PopUp from './components/PopUp';
+import { useState, useEffect } from 'react';
+import { products } from './Products';
+// import PopUp from './components/PopUp';
+// import { products } from '../src/Products';
 
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <>
-      <Route path="/" element={<HomePage />} />
-      <Route path="ProductLink" element={<ProductLink />} />
-      <Route path='EditProd' element={<EditProd />} />
-      {/* <Route path='PopUp' element={<PopUp />} /> */}
-    </>
-  )
-);
-function App(props) {
-  return (
-    <RouterProvider router={router} />
-  )
-}
-const mapStateToProps = state => {
-  return {
-    prod: state.products
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+//     <>
+//         {/* <Route path='PopUp' element={<PopUp />} /> */}
+//     </>
+//   )
+// );
+function App() {
+  const [listCheked, setListChecd] = useState([]);
+  const [currentProd, setcurrentProd] = useState([]);
+  const [product, setproduct] = useState(products);
+  const [isSelect, setisSelect] = useState(false);
+  const [selectData, setselectData] = useState([]);
+
+
+  const updateList = (product, index) => {
+    const list = [...listCheked];
+    listCheked[index] = product;
+    setListChecd(list);
   }
-}
-const mapDispatchToProps = dispatch => {
-  return {
-    change(name) {
-      dispatch({
-        type: "CHANGE",
-        payload: name
-      })
+
+  const handleCheck = (event) => {
+    const prodById = product.find(prod => prod.id === event.target.id);
+    let updateList = [...listCheked];
+    if (event.target.checked) {
+      updateList = [...listCheked, prodById]
     }
-
+    else {
+      updateList.splice(listCheked.indexOf(prodById), 1);
+    }
+    setListChecd(updateList);
   }
+  const selectFather = (event) => {
+    setisSelect(true);
+    if (currentProd.length === 0) {
+      setcurrentProd([listCheked.find(prod => prod.id === event.currentTarget.id)]);
+    }
+    else {
+      setcurrentProd(oldArray => [...oldArray, listCheked.find(prod => prod.id === event.currentTarget.id)]);
+    }
+    setListChecd(listCheked.filter(prod => prod.id !== event.currentTarget.id));
+  }
+  const removeFather = (event) => {
+    let toRemove = currentProd.find(prod => prod.id === event.currentTarget.id);
+    setListChecd(oldArray => [...oldArray, toRemove]);
+    setcurrentProd(currentProd.filter(prod => prod.id !== toRemove.id));
+  }
+  const addMainBasicData = (event) => {
+    console.log(event,"event from data")
+    var updateList = [...selectData];
+    var prodID = currentProd.find(prod => prod.id === event.target.id);
+    {
+        Object.entries(prodID.basicDataItems).map(() => (
+            event.target.checked ?
+                updateList = [...selectData, event.target.value] :
+                updateList.splice(selectData.indexOf(event.target.value), 1)
+        ))
+    }
+    setselectData(updateList);
 }
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+// console.log(event,"event from outside data")
+ 
+  return (
+    <BrowserRouter  >
+      <Routes>     
+        <Route path="ProductLink" element={<ProductLink
+          currentProd={currentProd}
+          // setcurrentProd={setcurrentProd}
+          products={listCheked}
+          setProducts={setListChecd}
+          // allProducts={product}
+          selectFather={selectFather}
+          removeFather={removeFather}
+          isSelect={isSelect}
+          addMainBasicData={addMainBasicData}
+          selectData={selectData}
+        />} />
+        <Route path='ProductLink/EditProd' element={<EditProd checked={listCheked} products={product} />} />
+        <Route path="/" element={<HomePage handleCheck={handleCheck} checked={listCheked} products={product} />} />
+      </Routes>
+    </BrowserRouter>
+  )
+}
+
+// const mapStateToProps = state => {
+//   return {
+//     prod: state.products
+//   }
+// }
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     change(name) {
+//       dispatch({
+//         type: "CHANGE",
+//         payload: name
+//       })
+//     }
+
+//   }
+// }
+export default App;
 
 
 // import './App.css';

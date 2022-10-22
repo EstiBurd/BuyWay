@@ -1,0 +1,91 @@
+body{
+    direction: rtl;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* .saveBtn{
+width: 300px;
+} */
+button {
+    margin: 20px;
+    outline: none;
+  }
+  .custom-btn {
+    width: 130px;
+    height: 40px;
+    padding: 10px 25px;
+    /* border-radius: 8px; */
+    border: 2px solid #000;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .btn-5 {
+    background: rgba(105, 104, 104, 0.685);
+    color: #fff;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+  }
+  .btn-5:hover {
+    background: transparent;
+    color: #000;
+     box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001;
+  }
+  .btn-5:before,
+  .btn-5:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: rgb(147, 193, 133);
+    transition:400ms ease all;
+  }
+  .btn-5:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .btn-5:hover:before,
+  .btn-5:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  .addInput{
+    font-size: 20px;
+    width: 200px;
+    height: 20px;
+    border-radius: 5px;
+    border-color: rgba(105, 104, 104, 0.685);
+  }
+  .addInput:hover{
+cursor: pointer;
+  }
+  .addInput:focus{
+    background-color: rgba(147, 193, 133, 0.254);
+    border-width: 2px;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+  }
+  .addDiv{
+    margin: 20px;
+  }
+  .allAdd{
+    padding: 60px;
+    width: 50%;
+    height: 100%;
+    background-color: gray;
+  }
+  
