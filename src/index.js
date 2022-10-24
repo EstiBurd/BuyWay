@@ -12,28 +12,13 @@ import {prodReducer} from './Store/Reducers/prod'
 import { products } from './Products';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
-// const reducer = (state = products, action) => {
-//   switch (action.type) {
-//     case "CHANGE":
-//       state={...state,products:action.payload.prod}
-//       break;
-  
-//     default:
-//       break;
-//   }
-//   return state;
-// }
-// const store = createStore(combineReducers({prod:prodReducer}),composeEnhancers)(applyMiddleware(thunk)));
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(combineReducers({ prod:prodReducer}), composeEnhancers
     (applyMiddleware(thunk)));
 
 
 root.render(
-  // <Provider store={store}>
-  //   <App/>
-  // </Provider>
+  
   <React.StrictMode>
     <Provider store={store}>
       <App />

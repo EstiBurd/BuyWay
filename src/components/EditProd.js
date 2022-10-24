@@ -15,7 +15,6 @@ const EditProd = ({products}) => {
         setupdateProd(Object.assign(updateProd, obj));
     }
     const save = () => {
-        // console.log(products,"products from edit page")
         Swal.fire({
             position: 'center',
             icon: 'success',
@@ -26,7 +25,7 @@ const EditProd = ({products}) => {
 
         navigate("/ProductLink");
     }
-    return (<>{console.log(location.state.data)}
+    return (<>
         <div className='allAdd'>
             <h2>הכנס ערכים חסרים</h2>
             {location.state.selectData.map((data, index) => {

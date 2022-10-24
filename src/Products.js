@@ -1,6 +1,3 @@
-//  import {createStore} from 'redux' ;
-//  import {Provider} from 'react-redux';
- 
   export const products=[
 	{
 	"id": "100",
@@ -280,7 +277,7 @@
 	},
 	"mapLists": { },
 	"basicDataItems": {
-		"כשר לפסח" : true,
+		"isKosher": "כשר לפסח בהשגחת הרבנות",
 		"notContain":"ללא שמן, ללא פרבנים",
 		"content":"50 מ\"ל",
 		"typeSceen":"לעור שומני/מעורב",
